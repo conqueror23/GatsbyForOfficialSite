@@ -5,3 +5,37 @@
  */
 
 // You can delete this file if you're not using it
+const path = require("path")
+exports.createPages = ({ boundActionCreators, graphql }) => {
+  const { createPage } = boundActionCreators;
+  const postTemplates = path.resolve('src/templates/BlogPost.js');
+  return graphql(`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            id
+            html
+            frontmatter {
+              title
+              path
+              date
+              author
+            }
+          }
+        }
+      }
+    }
+  `).then(res=>{
+      if(res.errors){
+          return Promise.reject(res.errors)
+      }
+      res.data.allMarkdownRemark.edges.forEach(({node})=>{
+          createPage({
+              path: node.frontmatter.path,
+              components: postTemplates,
+
+          })
+      })
+  })
+}
