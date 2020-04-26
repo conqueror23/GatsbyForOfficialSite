@@ -9,6 +9,7 @@ export default function blog({ data }) {
         {data.allMarkdownRemark.edges.map(record => (
           <div key={record.node.id}>
             <h3>{record.node.frontmatter.title}</h3>
+            <img src ={record.node.frontmatter.thumbnail}/>
             <div dangerouslySetInnerHTML={{__html:record.node.html}}></div>
             <div>
               created by {record.node.frontmatter.author} On{" "}
@@ -34,6 +35,7 @@ export const pageQuery = graphql`
             path
             date
             author
+            thumbnail
           }
         }
       }
