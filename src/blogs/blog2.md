@@ -1,5 +1,5 @@
 ---
-path: "/blog2"
+path: "/blog/blog2"
 title: "blog2 here"
 data: "220-30-43"
 author: "bruceWang"

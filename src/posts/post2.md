@@ -1,5 +1,5 @@
 ---
-path: "/post2"
+path: "/post/post2"
 title: "post2 Aoe!!"
 date: "220-30-42"
 author: "bruce"

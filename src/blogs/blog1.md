@@ -1,5 +1,5 @@
 ---
-path: "/blog1"
+path: "/blog/blog1"
 title: "blog1 here"
 date: "220-30-42"
 author: "bruce"

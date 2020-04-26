@@ -1,6 +1,6 @@
 ---
 
-path: "/blog4"
+path: "/blog/blog4"
 title: "Blog 4 for proficiency"
 date: "2020-04-24"
 author: "wayne"
