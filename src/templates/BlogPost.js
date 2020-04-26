@@ -5,7 +5,11 @@ export default function BlogPost({ data }) {
   const post = data.markdownRemark
   return (
     <div>
-      <Link to="/blog"> Go Back</Link>
+      <script type="text/javascript">
+        console.log('you have reach the blog post page here')
+      </script>
+      {console.log('you are in blogPost tempatlte')}
+      <Link to="/blog"> Blog List</Link>
       <hr />
       <h1>{post.frontmatter.title}</h1>
       <div dangerouslySetInnerHTML={{ __html: post.html }}></div>

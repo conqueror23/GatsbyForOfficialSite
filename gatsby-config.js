@@ -23,6 +23,13 @@ module.exports = {
         name :"blogs"
       }
     },
+    {
+      resolve:`gatsby-source-filesystem`,
+      options:{
+        path:`${__dirname}/src/posts`,
+        name:"posts"
+      }
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-plugin-manifest`,

@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 export default function blog({ data }) {
   return (
     <div>
-      <h1>Latest Blog</h1>
+      <h1>Latest Posts</h1>
       <div>
         {data.allMarkdownRemark.edges.map(record => (
           <div key={record.node.id}>
@@ -23,7 +23,7 @@ export default function blog({ data }) {
 }
 
 export const pageQuery = graphql`
-  query Blog {
+  query Post {
     allMarkdownRemark {
       edges {
         node {
